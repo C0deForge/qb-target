@@ -1,0 +1,75 @@
+:root {
+    --eyeBackground: transparent;
+    --eyeBorder: transparent;
+    --primary: transparent;
+    --secondary: transparent;
+    --background: transparent;
+    --borderSecondary: transparent;
+    --borderPrimary: transparent;
+}
+
+body {
+    overflow: hidden;
+}
+
+#target-eye {
+    font-size: 2vh;
+    transform: rotate(45deg);
+}
+
+.icon {
+    width: 2vw; height: 2vw;
+    background: var(--eyeBackground);
+    border: 0.15vw solid var(--eyeBorder);
+    transform: rotate(-45deg); justify-content: center;
+    display: flex; flex-direction: column; align-items: center;
+    position: absolute;
+    top: 50%; left: 50%;
+}
+
+#target-label-wrapper {
+    position: absolute;
+    left: 53%;
+    width: 12vw;
+    height: fit-content;
+    top: 49.25%; padding: 0.5vw;
+    border-radius: 0.2vw;
+    background: var(--background);
+    display: none; flex-direction: column;
+}
+
+
+#target-label {
+    list-style: none;
+    font-size: 1.3vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    user-select: none;
+    white-space: nowrap;
+}
+
+i {
+    color: var(--borderPrimary);
+}
+
+.target-wrapper {
+    width: 100%; height: 4vh;
+    background: var(--secondary);
+    border: 0.1vw solid var(--borderSecondary); margin-bottom: 1vh;
+    border-radius: 0.2vw; gap: 0.3vw; padding-left: 0.5vw; cursor: pointer;
+    display: flex; align-items: center; padding-right: 0.5vw;
+}
+
+.target-wrapper:hover > .target-icon > i {
+    color: white;
+}
+
+.target-wrapper:hover {
+    background: var(--primary);
+    border: 0.1vw solid var(--borderPrimary);
+}
+
+.target-wrapper:last-child {
+    margin: 0;
+}
